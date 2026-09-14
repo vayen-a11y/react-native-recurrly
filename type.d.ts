@@ -24,6 +24,7 @@ declare global {
         price: number;
         currency?: string;
         billing: string;
+        frequency?: string;
         renewalDate?: string;
         color?: string;
     }
@@ -49,6 +50,12 @@ declare global {
 
     interface ListHeadingProps {
         title: string;
+    }
+
+    interface CreateSubscriptionModalProps {
+        visible: boolean;
+        onClose: () => void;
+        onCreate: (subscription: Subscription) => void;
     }
 }
 
